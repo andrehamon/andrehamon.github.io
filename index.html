@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=800">
+  <title>~~*~~ Andre Hamon's HOMEPAGE!!!! ~~*~~</title>
+  <style>
+    /* ============================================
+       WELCOME TO MY SUPER COOL WEBPAGE!!!
+       BEST VIEWED IN NETSCAPE NAVIGATOR 4.0
+       RESOLUTION: 800x600
+    ============================================ */
+
+    @keyframes blink {
+      0%, 100% { visibility: visible; }
+      50% { visibility: hidden; }
+    }
+    @keyframes rainbow {
+      0%   { color: #ff0000; }
+      14%  { color: #ff7700; }
+      28%  { color: #ffff00; }
+      42%  { color: #00ff00; }
+      57%  { color: #00ffff; }
+      71%  { color: #0000ff; }
+      85%  { color: #ff00ff; }
+      100% { color: #ff0000; }
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { text-shadow: 0 0 4px #ff00ff, 0 0 10px #ff00ff, 3px 3px 0 #000; }
+      50%       { text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 3px 3px 0 #000; }
+    }
+    @keyframes slide-in {
+      from { letter-spacing: 80px; opacity: 0; }
+      to   { letter-spacing: 6px;  opacity: 1; }
+    }
+    @keyframes construction-scroll {
+      from { background-position: 0 0; }
+      to   { background-position: 56px 0; }
+    }
+    @keyframes counter-tick {
+      from { opacity: 0.3; }
+      to   { opacity: 1; }
+    }
+
+    * { margin: 0; padding: 0; }
+
+    body {
+      background-color: #000033;
+      background-image:
+        radial-gradient(ellipse 1px 1px at 15px  20px, #fff 0%, transparent 100%),
+        radial-gradient(ellipse 2px 2px at 80px  10px, #ffff88 0%, transparent 100%),
+        radial-gradient(ellipse 1px 1px at 50px  60px, #fff 0%, transparent 100%),
+        radial-gradient(ellipse 2px 2px at 130px 40px, #fff 0%, transparent 100%),
+        radial-gradient(ellipse 1px 1px at 170px 80px, #aaffff 0%, transparent 100%),
+        radial-gradient(ellipse 1px 1px at 30px  90px, #fff 0%, transparent 100%),
+        radial-gradient(ellipse 2px 2px at 110px 95px, #ffff88 0%, transparent 100%),
+        radial-gradient(ellipse 1px 1px at 190px 55px, #fff 0%, transparent 100%),
+        radial-gradient(ellipse 1px 1px at 65px  85px, #fff 0%, transparent 100%),
+        radial-gradient(ellipse 2px 2px at 155px 15px, #fff 0%, transparent 100%);
+      background-size: 200px 100px;
+      font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+      color: #00ff00;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    /* ---- TOP MARQUEE ---- */
+    .top-marquee {
+      background: #000;
+      color: #ffff00;
+      font-size: 16px;
+      padding: 4px 0;
+      border-top: 3px solid #ff00ff;
+      border-bottom: 3px solid #ff00ff;
+      font-family: "Courier New", monospace;
+    }
+
+    /* ---- HEADER ---- */
+    .header-wrapper {
+      margin: 12px 8px;
+      background: #000000;
+      border: 4px ridge #ff00ff;
+      padding: 16px 8px;
+      box-shadow: inset 0 0 20px #330033;
+    }
+
+    .site-title {
+      font-family: Impact, "Arial Black", sans-serif;
+      font-size: 64px;
+      letter-spacing: 6px;
+      animation: slide-in 1.2s ease-out forwards, pulse-glow 2.5s ease-in-out infinite;
+      color: #ffff00;
+      line-height: 1;
+    }
+
+    .under-name {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #00ffff;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      animation: rainbow 3s linear infinite;
+    }
+
+    /* ---- CONSTRUCTION BAR ---- */
+    .construction-bar {
+      height: 28px;
+      background: repeating-linear-gradient(
+        90deg,
+        #000 0px, #000 14px,
+        #ffdd00 14px, #ffdd00 28px
+      );
+      background-size: 56px 28px;
+      animation: construction-scroll 0.8s linear infinite;
+      border-top: 3px solid #ff6600;
+      border-bottom: 3px solid #ff6600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .construction-label {
+      background: rgba(0,0,0,0.75);
+      color: #ff6600;
+      font-family: Impact, sans-serif;
+      font-size: 14px;
+      letter-spacing: 4px;
+      padding: 2px 12px;
+      border: 1px solid #ff6600;
+    }
+
+    /* ---- MAIN CONTENT ---- */
+    .main-box {
+      margin: 14px 8px;
+      background: rgba(0,0,0,0.7);
+      border: 4px double #00ffff;
+      padding: 24px 16px;
+    }
+
+    .spinning-star {
+      font-size: 36px;
+      display: inline-block;
+      animation: spin 3s linear infinite;
+    }
+
+    .coming-soon-text {
+      font-family: Impact, "Arial Black", sans-serif;
+      font-size: 72px;
+      animation: rainbow 1.5s linear infinite;
+      letter-spacing: 4px;
+      display: block;
+      margin: 10px 0;
+    }
+
+    .blink {
+      animation: blink 0.7s step-start infinite;
+    }
+
+    .tagline {
+      color: #ff99ff;
+      font-size: 18px;
+      margin: 14px 0;
+      font-style: italic;
+    }
+    .tagline span {
+      animation: rainbow 4s linear infinite;
+    }
+
+    /* ---- SEPARATOR ---- */
+    .separator {
+      border: none;
+      height: 4px;
+      background: linear-gradient(to right,
+        #ff0000, #ff7700, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff
+      );
+      margin: 16px 0;
+    }
+
+    /* ---- SOCIAL BUTTONS (88x31 style) ---- */
+    .buttons-section {
+      margin: 16px 0;
+    }
+    .section-header {
+      font-family: Impact, sans-serif;
+      font-size: 20px;
+      color: #ffff00;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px #ff00ff;
+      margin-bottom: 12px;
+    }
+    .web-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .web-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 88px;
+      height: 31px;
+      font-size: 9px;
+      font-family: "Courier New", monospace;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px outset;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+      text-align: center;
+      transition: filter 0.1s;
+      animation: bounce 1.8s ease-in-out infinite;
+    }
+    .web-btn:nth-child(2) { animation-delay: 0.2s; }
+    .web-btn:nth-child(3) { animation-delay: 0.4s; }
+    .web-btn:nth-child(4) { animation-delay: 0.6s; }
+    .web-btn:active { border-style: inset; }
+    .web-btn:hover { filter: brightness(1.3); }
+
+    .btn-github {
+      background: linear-gradient(to bottom, #555, #222);
+      color: #fff;
+      border-color: #888 #222 #222 #888;
+    }
+    .btn-linkedin {
+      background: linear-gradient(to bottom, #0e76a8, #064e78);
+      color: #fff;
+      border-color: #5bc #064e78 #064e78 #5bc;
+    }
+    .btn-email {
+      background: linear-gradient(to bottom, #ff6600, #cc4400);
+      color: #fff;
+      border-color: #ffa #cc4400 #cc4400 #ffa;
+    }
+    .btn-geocities {
+      background: linear-gradient(to bottom, #cc0099, #880066);
+      color: #ffff00;
+      border-color: #ff88dd #880066 #880066 #ff88dd;
+    }
+
+    /* ---- COUNTER ---- */
+    .counter-section {
+      margin: 16px auto;
+      display: inline-block;
+    }
+    .counter-label {
+      font-size: 11px;
+      color: #ff99ff;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+    .counter-digits {
+      font-family: "Courier New", monospace;
+      font-size: 28px;
+      color: #00ff00;
+      background: #000;
+      border: 3px inset #00aa00;
+      padding: 4px 12px;
+      letter-spacing: 6px;
+      animation: counter-tick 0.6s steps(1, end) infinite alternate;
+      text-shadow: 0 0 8px #00ff00;
+      display: inline-block;
+    }
+
+    /* ---- GUESTBOOK ---- */
+    .guestbook {
+      margin: 12px 0;
+      font-size: 14px;
+    }
+    .guestbook a {
+      color: #ffff00;
+      text-decoration: underline;
+      font-family: "Courier New", monospace;
+    }
+    .guestbook a:visited { color: #ff88ff; }
+
+    /* ---- BOTTOM MARQUEE ---- */
+    .bottom-marquee {
+      margin-top: 20px;
+      background: #220000;
+      color: #ff4444;
+      font-size: 13px;
+      padding: 4px 0;
+      border-top: 2px solid #ff0000;
+      border-bottom: 2px solid #ff0000;
+      font-family: "Courier New", monospace;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+      margin: 10px 0 16px;
+      font-size: 10px;
+      color: #666688;
+      font-family: "Courier New", monospace;
+    }
+    .footer a { color: #4444aa; }
+    .webring {
+      margin-top: 6px;
+      font-size: 10px;
+      color: #555577;
+    }
+
+    /* ---- FLOATING GIFS (CSS animated) ---- */
+    .gif-row {
+      margin: 10px 0;
+      font-size: 28px;
+      letter-spacing: 8px;
+    }
+    .star1 { animation: bounce 1.0s ease-in-out infinite; display: inline-block; }
+    .star2 { animation: bounce 1.0s ease-in-out infinite 0.15s; display: inline-block; }
+    .star3 { animation: bounce 1.0s ease-in-out infinite 0.30s; display: inline-block; }
+    .star4 { animation: bounce 1.0s ease-in-out infinite 0.45s; display: inline-block; }
+    .star5 { animation: bounce 1.0s ease-in-out infinite 0.60s; display: inline-block; }
+    .star6 { animation: bounce 1.0s ease-in-out infinite 0.75s; display: inline-block; }
+    .star7 { animation: bounce 1.0s ease-in-out infinite 0.90s; display: inline-block; }
+  </style>
+</head>
+<body>
+
+<!-- TOP MARQUEE -->
+<marquee class="top-marquee" scrollamount="4">
+  ★ ★ ★ &nbsp; WELCOME TO MY WEBPAGE &nbsp; ★ ★ ★ &nbsp;
+  UNDER CONSTRUCTION &nbsp; ★ ★ ★ &nbsp;
+  BEST VIEWED IN NETSCAPE NAVIGATOR AT 800x600 &nbsp; ★ ★ ★ &nbsp;
+  SITE COMING SOON!!! &nbsp; ★ ★ ★ &nbsp;
+  ADD ME TO YOUR BOOKMARKS &nbsp; ★ ★ ★ &nbsp;
+  NO HOTLINKING &nbsp; ★ ★ ★
+</marquee>
+
+<!-- HEADER -->
+<div class="header-wrapper">
+  <div class="gif-row">
+    <span class="star1">✦</span>
+    <span class="star2">★</span>
+    <span class="star3">✦</span>
+    <span class="star4">⚡</span>
+    <span class="star5">✦</span>
+    <span class="star6">★</span>
+    <span class="star7">✦</span>
+  </div>
+
+  <div class="site-title">ANDRE HAMON</div>
+  <div class="under-name">~*~ official homepage ~*~</div>
+
+  <div class="gif-row" style="margin-top:10px;">
+    <span class="star1">💫</span>
+    <span class="star2">🌟</span>
+    <span class="star3">✨</span>
+    <span class="star4">💫</span>
+    <span class="star5">🌟</span>
+    <span class="star6">✨</span>
+    <span class="star7">💫</span>
+  </div>
+</div>
+
+<!-- CONSTRUCTION BAR -->
+<div class="construction-bar">
+  <span class="construction-label">🚧 &nbsp; UNDER CONSTRUCTION &nbsp; 🚧</span>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-box">
+
+  <span class="spinning-star">⭐</span>
+  <span class="spinning-star" style="animation-direction: reverse; font-size: 24px; margin: 0 16px;">🌀</span>
+  <span class="spinning-star">⭐</span>
+
+  <br><br>
+
+  <span class="coming-soon-text">COMING SOON!!!</span>
+
+  <p class="tagline">
+    <span class="blink">&#9608;</span>&nbsp;
+    <span>Something totally awesome is on its way. Stay tuned!!</span>
+    &nbsp;<span class="blink">&#9608;</span>
+  </p>
+
+  <hr class="separator">
+
+  <!-- SOCIAL BUTTONS -->
+  <div class="buttons-section">
+    <div class="section-header">~~ MY LINKS ~~</div>
+    <div class="web-buttons">
+      <a href="https://github.com/andrehamon" target="_blank" class="web-btn btn-github">
+        🐙<br>GITHUB
+      </a>
+      <a href="https://linkedin.com/in/andrehamon" target="_blank" class="web-btn btn-linkedin">
+        💼<br>LINKEDIN
+      </a>
+      <a href="mailto:hello@andrehamon.me" class="web-btn btn-email">
+        📧<br>E-MAIL ME!
+      </a>
+      <a href="http://www.geocities.com" target="_blank" class="web-btn btn-geocities">
+        🏠<br>GEOCITIES
+      </a>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <!-- VISITOR COUNTER -->
+  <div class="counter-section">
+    <div class="counter-label">YOU ARE VISITOR NUMBER:</div>
+    <div class="counter-digits">001,337</div>
+    <div style="font-size:9px; color: #446644; margin-top:3px; font-family: 'Courier New', monospace;">
+      since jan 1, 1996
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <!-- GUESTBOOK -->
+  <div class="guestbook">
+    <span class="blink">➤</span>
+    <a href="#">Sign My Guestbook!</a>
+    &nbsp;|&nbsp;
+    <a href="#">View My Guestbook</a>
+    &nbsp;|&nbsp;
+    <a href="#">Awards I've Won!!</a>
+    <span class="blink">◀</span>
+  </div>
+
+</div>
+
+<!-- BOTTOM MARQUEE -->
+<marquee class="bottom-marquee" scrollamount="2" direction="right">
+  ⚠ THIS PAGE IS PROTECTED BY COPYWRITE LAW ⚠ DO NOT STEAL MY HTML ⚠
+  GEOCITIES MEMBER SINCE 1998 ⚠ NO FRAMES VERSION AVAILABLE ⚠
+</marquee>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    &copy; 1996&ndash;2026 Andre Hamon &bull; All Rights Reserved &bull;
+    <a href="#">Privacy Policy</a> &bull;
+    <a href="#">Disclaimer</a>
+  </div>
+  <div class="webring">
+    ← <a href="#">Prev</a> &nbsp;
+    [&nbsp;<a href="#">Andre's Personal Webring</a>&nbsp;] &nbsp;
+    <a href="#">Next</a> →
+  </div>
+  <div style="margin-top: 6px; color: #443344;">
+    Last Updated: <span id="lastmod">February 28, 2026</span> &bull;
+    Designed in Notepad &bull;
+    Best viewed in Netscape Navigator 4.0 &bull; 800x600 &bull; 256 colors
+  </div>
+</div>
+
+</body>
+</html>
